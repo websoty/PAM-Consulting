@@ -1,0 +1,52 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+
+body {
+  font-size: 16px;
+  color: #626262;
+  font-weight: 400;
+  margin: 0;
+  font-family: "AvenirNextCyr-Regular";
+  line-height: 24px;
+  color: #434364;
+}
+/*# sourceMappingURL=global.css.map */

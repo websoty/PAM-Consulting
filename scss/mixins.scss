@@ -1,0 +1,31 @@
+@mixin btn($type) {
+
+  font-size: 20px;
+  color: $color-first;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: $font-mont;
+  box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+  transition: all .3s ease-out;
+
+  @if $type == 'default' {
+      width: 180px;
+      padding: 15px 24px;
+      background-color: #FFEB80;
+  } @else if $type == 'find' {
+      width: 200px;
+      padding: 16px 22px;
+      background: linear-gradient(to right, #FFEB80, #FDBFA3);
+  } @else if $type == 'submit' {
+      padding: 18px 34px;
+      background-color: #FFDB80;
+      font-family: $font-bold;
+  }
+  &:hover {
+    box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to right, #6D31D0, #AB80EF);
+    color: #FFEB80;
+    border: 1px solid #FFEB80;
+    }
+  }
+
