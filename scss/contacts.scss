@@ -1,0 +1,235 @@
+@import 'style';
+
+.contacts {
+  padding-bottom: 60px;
+  background: linear-gradient(180deg,#6D31D01A 10%, #6D31D036 26%, #6D31D079 47.5%, #6D31D0);
+  &__content {
+    padding: 60px 0 40px 0;
+  }
+  &__title {
+    font-family: $font-demi;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 60px;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      background-color: #FDBFA3;
+      height: 4px;
+    }
+  }
+  &__phone,
+  &__mail {
+    img {
+      max-width: 40px;
+      height: auto;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    &-link,
+    &-email {
+      display: inline-block;
+      color: $color-first;
+      font-size: 20px;
+      font-family: $font-mont;
+      transition: transform .3s ease-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  &__phone-link {
+    margin-bottom: 30px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #ffdb8080 20%, #fdbfa396 80%);
+  padding: 35px 10px;
+  border-radius: 60px;
+  &__title {
+    margin-bottom: 20px;
+    font-family: $font-demi;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase; 
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  input,
+  textarea {
+    width: 100%;
+    min-height: 47px;
+    border-radius: 20px;
+    padding: 12px 30px;
+    background-color: #fff;
+    border: none;
+    &::placeholder {
+      opacity: 0.6;
+    }
+    &:focus {
+      outline: 2px solid $color-first;
+    }
+  }
+  textarea {
+    height: 100px;
+  }
+  }
+
+  &__agree {
+    margin: 25px 0;
+  }
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    p {
+      font-size: 14px;
+    }
+    a {
+      color: $color-first;
+      text-decoration: underline;
+    }
+  }
+  .btn__submit {
+  @include btn('submit');
+  align-self: center;
+}
+}
+
+#form__checkbox-check {
+  opacity: 0;
+  position: absolute;
+}
+
+.custom__checkbox {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  appearance: none;
+  flex-shrink: 0;
+  padding: 0;
+  cursor: pointer;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 9px;
+    width: 13px;
+    height: 25px;
+    border: solid $color-first;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+}
+
+#form__checkbox-check:checked + .custom__checkbox::after {
+  opacity: 1;
+}
+
+// adaptive
+
+@media (min-width: 480px) {
+  .contacts {
+    padding: 0 20px 60px;
+    &__title {
+      &::after {
+        width: 380px;
+      }
+    }
+  }
+  .form__checkbox {
+    align-items: center;
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .contacts {
+    padding: 0 60px 60px;
+    &__title {
+      margin-bottom: 80px;
+    }
+    &__content {
+      padding: 80px 0 60px 0;
+    }
+  }
+  .form {
+    &__checkbox {
+      gap: 25px;
+    }
+    &__items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    input {
+      width: 48%;
+      font-size: 16px;
+    }
+  }
+  textarea {
+    width: 97.5%; 
+    font-size: 16px;
+  }
+}
+}
+
+@media (min-width: 1000px) {
+  .contacts {
+    padding: 0 160px 60px;
+  }
+  .form {
+    &__checkbox {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .form {
+    max-width: 1180px;
+    min-height: 600px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    &__inner {
+      max-width: 580px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+    &__items {
+      input,
+      textarea {
+        font-size: 18px;
+      }
+    }
+    .btn__submit {
+      margin-top: 30px;
+    }
+  }
+}
