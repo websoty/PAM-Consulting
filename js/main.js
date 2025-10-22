@@ -1,5 +1,6 @@
 const header = document.getElementById('header-placeholder');
 const footer = document.getElementById('footer-placeholder');
+const contacts = document.getElementById('contacts-placeholder');
 
 async function loadHeaderFooter() {
   try {
@@ -13,6 +14,11 @@ async function loadHeaderFooter() {
     if (!footerRes.ok) throw new Error ('Ошибка при загрузке футера');
       const footerContent = await footerRes.text();
         footer.innerHTML = footerContent;
+
+    const contactsRes = await fetch('contacts.html');
+    if (!contactsRes.ok) throw new Error ('Ошибка загрузки блока контакты');
+      const contactsContent = await contactsRes.text();
+        contacts.innerHTML = contactsContent;
   }
   catch(err) {
   console.error('Ошибка', err);
