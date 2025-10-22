@@ -1,7 +1,9 @@
-const form = document.querySelector('.form');
+// const form = document.querySelector('.form');
 
-form.addEventListener('submit', (e) => {
+document.addEventListener('submit', (e) => {
+  if (!e.target.classList.contains('form')) return;
   e.preventDefault();
+  const form = e.target;
     let formValid = true;
 
   Array.from(form).forEach(input => {
