@@ -1,0 +1,105 @@
+.values {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7d382eb), to(#FDBFA3));
+  background: linear-gradient(180deg, #f7d382eb, #FDBFA3);
+}
+
+.values__title {
+  font-size: 36px;
+  font-family: "AvenirNextCyr-Demi";
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.values__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px 10px;
+}
+
+.values__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.values__item h4 {
+  color: #6D31D0;
+  font-size: 20px;
+  font-family: "Montserrat-SemiBold";
+  text-align: center;
+}
+
+.values__item p {
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .values__inner {
+    padding: 80px 30px;
+  }
+  .values__list {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .values__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(50% -10px);
+            flex: 1 1 calc(50% -10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 768px) {
+  .values__inner {
+    padding: 80px 70px;
+  }
+  .values__list {
+    gap: 50px 10px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .values__list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .values__title {
+    padding-top: 0;
+  }
+  .values__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .values__item {
+    max-width: 280px;
+  }
+}
+/*# sourceMappingURL=help.css.map */
