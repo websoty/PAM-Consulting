@@ -1,0 +1,121 @@
+@import 'style';
+
+.services {
+  background: linear-gradient(180deg, $color-second, $color-first);
+  &__inner {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    h1 {
+    font-family: $font-mont;
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 40px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      background-color: #FDBFA3;
+      height: 4px;
+    }
+    }
+  }
+   &__image {
+    width: 100%;
+    object-fit: cover;
+    height: 260px;
+    }
+    &__items {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  &__item {
+    overflow: hidden;
+    &-descr {
+      padding: 20px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 320px;
+    }
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    h2 {
+      span {
+        display: block;
+      }
+      font-size: 28px;
+      line-height: 32px;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 20px 0;
+      font-family: $font-demi;
+    }
+    p {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .btn__find {
+      @include btn('find');
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .services {
+    &__image {
+      height: auto;
+    }
+    &__title {
+      h1 {
+         &::after {
+        width: 380px;
+      }
+    }
+    }
+    &__item {
+      max-width: 580px;
+      transition: transform .3s ease-out;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 23px 0 rgb(247, 244, 244);
+      }
+      &-descr {
+        max-width: 380px;
+    }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .services {
+    &__items {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+    &__item {
+      max-width: 380px;
+    }
+    &__image {
+      height: 260px;
+    }
+  }
+}
