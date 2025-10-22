@@ -1000,12 +1000,37 @@ body {
   margin-top: 20px;
 }
 
+.relocation__content {
+  padding: 60px 50px 40px;
+}
+
+.relocation__title {
+  font-size: 36px;
+  font-family: "AvenirNextCyr-Demi";
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.relocation p + p {
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+}
+
+.relocation img {
+  width: 100%;
+  display: block;
+}
+
 @media (min-width: 768px) {
   .about__descr {
     padding: 60px 80px;
   }
   .about__descr-text {
     margin: 0 auto;
+  }
+  .relocation__content {
+    padding: 60px 90px 60px;
   }
 }
 
@@ -1025,12 +1050,50 @@ body {
     right: 340px;
     top: 150px;
   }
+  .relocation__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+  .relocation__content {
+    padding: 0;
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 1440px) {
   .decor__title {
     position: absolute;
     left: -270px;
+  }
+  .relocation__inner {
+    padding: 100px 0 80px 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+  .relocation__content {
+    max-width: 800px;
+  }
+  .relocation__image {
+    position: relative;
+  }
+  .relocation__image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 /*# sourceMappingURL=about-us.css.map */
