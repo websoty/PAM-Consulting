@@ -690,6 +690,7 @@ body {
 
 .form__items textarea {
   height: 100px;
+  resize: none;
 }
 
 .form__agree {
