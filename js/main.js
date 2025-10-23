@@ -1,7 +1,7 @@
 const header = document.getElementById('header-placeholder');
 const footer = document.getElementById('footer-placeholder');
 const contacts = document.getElementById('contacts-placeholder');
-const help = document.getElementById('help-placeholder');
+const helpBlock = document.getElementById('helpBlock-placeholder');
 
 async function loadHeaderFooter() {
   try {
@@ -16,15 +16,17 @@ async function loadHeaderFooter() {
       const footerContent = await footerRes.text();
         footer.innerHTML = footerContent;
 
+    const helpRes = await fetch('help.html');
+      if (!helpRes.ok) throw new Error ('Ошибка при загрузке блока');
+        const helpContent = await helpRes.text();
+          helpBlock.innerHTML = helpContent;
+
     const contactsRes = await fetch('contacts.html');
     if (!contactsRes.ok) throw new Error ('Ошибка загрузки блока контакты');
       const contactsContent = await contactsRes.text();
         contacts.innerHTML = contactsContent;
 
-    const helpRes = await fetch('help.html');
-      if (!helpRes.ok) throw new Error ('Ошибка при загрузке блока');
-        const helpContent = await helpRes.text();
-        help.innerHTML = helpContent;
+
   }
   catch(err) {
   console.error('Ошибка', err);
