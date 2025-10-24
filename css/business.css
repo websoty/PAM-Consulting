@@ -1076,164 +1076,92 @@ body {
   margin-top: 100px;
   font-family: "AvenirNextCyr-Demi";
   font-size: 36px;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  line-height: 40px;
 }
 
-.about {
+.businessrelocation {
   position: relative;
 }
 
-.about__hero {
+.businessrelocation__hero {
   width: 100%;
   height: 800px;
   overflow: hidden;
 }
 
-.about__hero-img {
+.businessrelocation__hero-img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: left;
+     object-position: left;
 }
 
-.about__descr {
-  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #6D31D0CC));
-  background: linear-gradient(to right, #6D31D0CC 80%);
-  padding: 60px 50px;
+.friendlybusiness ul,
+.qualitylife ul,
+.economic ul {
+  margin: 30px 0;
 }
 
-.about__descr p {
-  color: #fff;
-  font-size: 20px;
-  font-family: "Montserrat-SemiBold";
-  line-height: 32px;
+.friendlybusiness ul li,
+.qualitylife ul li,
+.economic ul li {
+  color: #6D31D0;
+  list-style: disc;
+  list-style-position: inside;
 }
 
-.about__descr p + p {
-  margin-top: 20px;
-}
-
-.relocation__content {
-  padding: 60px 50px 40px;
-}
-
-.relocation__title {
-  font-size: 36px;
-  font-family: "AvenirNextCyr-Demi";
-  line-height: 40px;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-}
-
-.relocation p + p {
-  margin-top: 20px;
-  letter-spacing: 0.5px;
-}
-
-.relocation img {
+.friendlybusiness img,
+.qualitylife img,
+.economic img {
   width: 100%;
   display: block;
 }
 
-.values {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f7d382eb), to(#FDBFA3));
-  background: linear-gradient(180deg, #f7d382eb, #FDBFA3);
+.friendlybusiness__text,
+.qualitylife__text,
+.economic__text {
+  padding: 80px 50px 40px;
 }
 
-.values__title {
-  font-size: 36px;
+.friendlybusiness__text h3,
+.qualitylife__text h3,
+.economic__text h3 {
+  font-size: 28px;
   font-family: "AvenirNextCyr-Demi";
-  line-height: 40px;
+  line-height: 32px;
   text-transform: uppercase;
-  margin-bottom: 60px;
-  text-align: center;
-  padding-top: 50px;
+  margin-bottom: 35px;
 }
 
-.values__title span {
-  display: inline-block;
-}
-
-.values__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px 10px;
-}
-
-.values__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 20px;
-}
-
-.values__item h4 {
-  color: #6D31D0;
-  font-size: 20px;
-  font-family: "Montserrat-SemiBold";
-  text-align: center;
-}
-
-.values__item p {
-  text-align: center;
-}
-
-@media (min-width: 480px) {
-  .values__inner {
-    padding: 80px 30px;
-  }
-  .values__list {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .values__item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 calc(50% -10px);
-            flex: 1 1 calc(50% -10px);
-    max-width: calc(50% - 10px);
-  }
+.friendlybusiness__text p + p,
+.qualitylife__text p + p,
+.economic__text p + p {
+  margin-top: 20px;
+  letter-spacing: 0.5px;
 }
 
 @media (min-width: 768px) {
-  .about__descr {
-    padding: 60px 80px;
-  }
-  .about__descr-text {
+  .friendlybusiness__inner,
+  .qualitylife__inner,
+  .economic__inner {
+    max-width: 800px;
     margin: 0 auto;
+    padding: 80px 40px;
   }
-  .relocation__content {
-    padding: 60px 90px 60px;
-  }
-  .values__inner {
-    padding: 80px 70px;
-  }
-  .values__list {
-    gap: 50px 10px;
+  .friendlybusiness__text,
+  .qualitylife__text,
+  .economic__text {
+    padding: 0;
+    margin-bottom: 90px;
   }
 }
 
 @media (min-width: 1001px) {
-  .about__hero {
+  .businessrelocation__hero {
     height: 530px;
-  }
-  .about__descr-text {
-    max-width: 800px;
   }
   .decor {
     background-image: url(/images/decor-big.png);
@@ -1244,84 +1172,84 @@ body {
     right: 340px;
     top: 150px;
   }
-  .relocation__inner {
-    max-width: 800px;
-    margin: 0 auto;
-    padding-top: 100px;
-  }
-  .relocation__content {
-    padding: 0;
-    margin-bottom: 40px;
-  }
-  .values__list {
-    max-width: 600px;
-    margin: 0 auto;
-  }
 }
 
 @media (min-width: 1440px) {
-  .about img {
+  .businessrelocation img {
     -o-object-position: right;
        object-position: right;
     -o-object-fit: contain;
        object-fit: contain;
   }
   .decor {
-    left: -40%;
+    left: 0;
     background-position: top;
   }
   .decor__title {
     position: absolute;
     left: 50px;
   }
-  .relocation__inner {
-    padding: 100px 0 80px 130px;
+  .friendlybusiness__inner,
+  .qualitylife__inner,
+  .economic__inner {
+    max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    max-width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 60px;
   }
-  .relocation__content {
+  .friendlybusiness__text,
+  .qualitylife__text,
+  .economic__text {
+    margin: 0;
     max-width: 800px;
   }
-  .relocation__image {
+  .friendlybusiness__image,
+  .qualitylife__image {
     position: relative;
   }
-  .relocation__image::before {
+  .friendlybusiness__image::before,
+  .qualitylife__image::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 80px;
     height: 100%;
+    top: 0;
+    left: 0;
     background: rgba(255, 255, 255, 0.5);
   }
-  .values__title {
-    padding-top: 0;
+  .friendlybusiness__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
-  .values__list {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    max-width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .qualitylife__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .values__item {
-    max-width: 280px;
+  .economic img {
+    width: 800px;
+  }
+  .economic__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
 @media (min-width: 1600px) {
   .decor {
-    left: -16%;
+    left: 20%;
   }
 }
-/*# sourceMappingURL=about-us.css.map */
+/*# sourceMappingURL=business.css.map */
