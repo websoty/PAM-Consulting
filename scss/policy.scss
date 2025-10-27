@@ -1,0 +1,85 @@
+@import 'style';
+
+.policy {
+  &__inner {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 0;
+  }
+  &__title {
+    font-family: $font-demi;
+    font-size: 24px;
+    margin: 0 auto 40px;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #FDBFA3;
+      bottom: -20px;
+      left: 0;
+    }
+  }
+  &__rubric {
+    &-title {
+      margin-bottom: 20px;
+      font-family: $font-medium;
+    }
+  }
+  p + p {
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+  }
+  ol {
+    padding: 0;
+  }
+  ul {
+    margin-bottom: 20px;
+  }
+  h5 {
+    margin-top: 20px;
+  }
+  &__info {
+    margin-right: auto;
+    p + p {
+      margin: 0;
+    }
+    p, a {
+      font-family: $font-bold;
+    }
+  }
+  &__personal {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 480px) {
+  .policy__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .policy {
+    &__inner {
+      padding: 40px 50px;
+      gap:40px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .policy {
+    &__inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+}
