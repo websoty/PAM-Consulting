@@ -53,6 +53,35 @@ async function loadHeaderFooter() {
   loadHeaderFooter();
 
 
+$('.swiper').slick({
+  dots: true,
+  infinite: true,
+  speed: 800,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: false,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  fade: true,
+  cssEase: 'linear',
+    responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+      }
+    }
+  ]
+});
+
+
+
+
+
+
 // слайдер
 function slider() {
   $('.faq__slider').slick({

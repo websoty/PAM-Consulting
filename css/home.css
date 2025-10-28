@@ -769,6 +769,14 @@
 }
 
 @media (min-width: 768px) {
+  .swiper ul.slick-dots {
+    right: 0;
+    top: 50%;
+    width: 200px;
+    height: 50px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
   .cyprus,
   .investIn,
   .familyRe,
@@ -920,14 +928,17 @@
 
 @media (min-width: 1440px) {
   .cyprus {
+    height: 800px;
     background-position: center;
     background-image: url(/images/cyprus-1440.png);
   }
   .investIn {
+    height: 800px;
     background-position: center;
     background-image: url(/images/invest-1440.png);
   }
   .familyRe {
+    height: 800px;
     background-position: center;
     overflow-y: hidden;
     background-image: url(/images/family-1440.png);
@@ -940,6 +951,7 @@
     height: 900px;
   }
   .businessRe {
+    height: 800px;
     overflow-y: hidden;
     background-image: url(/images/business-1440.png);
     background-position: top;
@@ -951,6 +963,7 @@
     height: 900px;
   }
   .yachtsRe {
+    height: 800px;
     background-position: bottom;
     background-image: url(/images/yachts-1440.png);
   }
@@ -958,6 +971,7 @@
     margin: 150px 0 auto;
   }
   .moving {
+    height: 800px;
     overflow-y: hidden;
     background-image: url(/images/moving-1440.png);
   }
@@ -971,5 +985,13 @@
   .moving__content {
     margin: 150px 0 auto;
   }
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper ul.slick-dots {
+  bottom: 10px;
 }
 /*# sourceMappingURL=home.css.map */
