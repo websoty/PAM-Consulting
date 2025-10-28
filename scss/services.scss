@@ -1,4 +1,6 @@
-@import 'style';
+@import 'vars';
+@import 'fonts';
+@import 'mixins';
 
 .services {
   background: linear-gradient(180deg, $color-second, $color-first);

@@ -1,0 +1,975 @@
+@font-face {
+  font-family: 'AvenirNextCyr-Bold';
+  src: url(../fonts/AvenirNextCyr-Bold.woff2) format(woff2), url(../fonts/AvenirNextCyr-Bold.woff) format(woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextCyr-Demi';
+  src: url(../fonts/AvenirNextCyr-Demi.woff2) format(woff2), url(../fonts/AvenirNextCyr-Demi.woff) format(woff);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextCyr-Medium';
+  src: url(../fonts/AvenirNextCyr-Medium.woff2) format(woff2), url(../fonts/AvenirNextCyr-Medium.woff) format(woff);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextCyr-Regular';
+  src: url(../fonts/AvenirNextCyr-Regular.woff2) format(woff2), url(../fonts/AvenirNextCyr-Regular.woff) format(woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url(../fonts/Montserrat-SemiBold.woff2) format(woff2), url(../fonts/Montserrat-SemiBold.woff) format(woff);
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cyprus {
+  background-image: url(/images/cyprus-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15% center;
+  margin-top: -1rem;
+}
+
+.cyprus__inner {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cyprus__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+.cyprus__links {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cyprus__links a {
+  font-family: "AvenirNextCyr-Medium";
+  text-transform: uppercase;
+  color: #FFDB80;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  padding: 0 8px;
+  position: relative;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.cyprus__links a:hover {
+  color: #6D31D0;
+  background-color: #FFDB80;
+}
+
+.cyprus__text {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cyprus__text h1 {
+  font-family: "Montserrat-SemiBold";
+  font-size: 28px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.cyprus__text span {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  font-family: "Montserrat-SemiBold";
+  line-height: 26px;
+  margin-bottom: 30px;
+}
+
+.cyprus__text p {
+  color: #fff;
+}
+
+.cyprus .btn__find {
+  font-size: 20px;
+  color: #6D31D0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Montserrat-SemiBold";
+  -webkit-box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 200px;
+  padding: 16px 22px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFEB80), to(#FDBFA3));
+  background: linear-gradient(to right, #FFEB80, #FDBFA3);
+}
+
+.cyprus .btn__find:hover {
+  -webkit-box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+  background: -webkit-gradient(linear, left top, right top, from(#6D31D0), to(#AB80EF));
+  background: linear-gradient(to right, #6D31D0, #AB80EF);
+  color: #FFEB80;
+  border: 1px solid #FFEB80;
+}
+
+.cities {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cities h4 {
+  color: #fff;
+  font-family: "Montserrat-SemiBold";
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.cities__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cities__city {
+  width: 144px;
+  height: 180px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+.cities__city img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.cities__city p {
+  font-size: 20px;
+  line-height: 32px;
+  font-family: "Montserrat-SemiBold";
+  color: #828CDE;
+}
+
+.investIn {
+  height: 840px;
+  overflow-x: hidden;
+  background-image: url(/images/invest-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15% center;
+  position: relative;
+}
+
+.investIn__decor {
+  position: absolute;
+  top: 60px;
+}
+
+.investIn__inner {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.investIn__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+  z-index: 50;
+}
+
+.investIn__links {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.investIn__links a {
+  font-family: "AvenirNextCyr-Medium";
+  text-transform: uppercase;
+  color: #FFDB80;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  padding: 0 8px;
+  position: relative;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.investIn__links a:hover {
+  color: #6D31D0;
+  background-color: #FFDB80;
+}
+
+.investIn__text {
+  color: inherit;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.investIn__text h1 {
+  font-family: "Montserrat-SemiBold";
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.investIn .btn__find {
+  font-size: 20px;
+  color: #6D31D0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Montserrat-SemiBold";
+  -webkit-box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 200px;
+  padding: 16px 22px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFEB80), to(#FDBFA3));
+  background: linear-gradient(to right, #FFEB80, #FDBFA3);
+  text-align: center;
+  display: inline-block;
+}
+
+.investIn .btn__find:hover {
+  -webkit-box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+  background: -webkit-gradient(linear, left top, right top, from(#6D31D0), to(#AB80EF));
+  background: linear-gradient(to right, #6D31D0, #AB80EF);
+  color: #FFEB80;
+  border: 1px solid #FFEB80;
+}
+
+.familyRe {
+  height: 700px;
+  overflow-x: hidden;
+  background-image: url(/images/family-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+
+.familyRe__decor1 {
+  display: none;
+}
+
+.familyRe__decor {
+  position: absolute;
+}
+
+.familyRe__inner {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.familyRe__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+  z-index: 50;
+}
+
+.familyRe__links {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.familyRe__links a {
+  font-family: "AvenirNextCyr-Medium";
+  text-transform: uppercase;
+  color: #FFDB80;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  padding: 0 8px;
+  position: relative;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.familyRe__links a:hover {
+  color: #6D31D0;
+  background-color: #FFDB80;
+}
+
+.familyRe__text {
+  color: inherit;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.familyRe__text h1 {
+  font-family: "Montserrat-SemiBold";
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.familyRe .btn__find {
+  font-size: 20px;
+  color: #6D31D0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Montserrat-SemiBold";
+  -webkit-box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 200px;
+  padding: 16px 22px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFEB80), to(#FDBFA3));
+  background: linear-gradient(to right, #FFEB80, #FDBFA3);
+  text-align: center;
+  display: inline-block;
+}
+
+.familyRe .btn__find:hover {
+  -webkit-box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+  background: -webkit-gradient(linear, left top, right top, from(#6D31D0), to(#AB80EF));
+  background: linear-gradient(to right, #6D31D0, #AB80EF);
+  color: #FFEB80;
+  border: 1px solid #FFEB80;
+}
+
+.businessRe {
+  height: 840px;
+  overflow-x: hidden;
+  background-image: url(/images/business-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 35% center;
+  position: relative;
+}
+
+.businessRe__decor {
+  position: absolute;
+  display: none;
+}
+
+.businessRe__inner {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.businessRe__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 100px 0 40px;
+  z-index: 50;
+}
+
+.businessRe__links {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.businessRe__links a {
+  font-family: "AvenirNextCyr-Medium";
+  text-transform: uppercase;
+  color: #FFDB80;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  padding: 0 8px;
+  position: relative;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.businessRe__links a:hover {
+  color: #6D31D0;
+  background-color: #FFDB80;
+}
+
+.businessRe__text {
+  color: inherit;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.businessRe__text h1 {
+  font-family: "Montserrat-SemiBold";
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.businessRe .btn__find {
+  font-size: 20px;
+  color: #6D31D0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Montserrat-SemiBold";
+  -webkit-box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 200px;
+  padding: 16px 22px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFEB80), to(#FDBFA3));
+  background: linear-gradient(to right, #FFEB80, #FDBFA3);
+  text-align: center;
+  display: inline-block;
+}
+
+.businessRe .btn__find:hover {
+  -webkit-box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+  background: -webkit-gradient(linear, left top, right top, from(#6D31D0), to(#AB80EF));
+  background: linear-gradient(to right, #6D31D0, #AB80EF);
+  color: #FFEB80;
+  border: 1px solid #FFEB80;
+}
+
+.yachtsRe {
+  height: 840px;
+  overflow-x: hidden;
+  background-image: url(/images/yachts-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.yachtsRe__inner {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.yachtsRe__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+  z-index: 50;
+}
+
+.yachtsRe__links {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.yachtsRe__links a {
+  font-family: "AvenirNextCyr-Medium";
+  text-transform: uppercase;
+  color: #FFDB80;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  padding: 0 8px;
+  position: relative;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.yachtsRe__links a:hover {
+  color: #6D31D0;
+  background-color: #FFDB80;
+}
+
+.yachtsRe__text {
+  color: inherit;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.yachtsRe__text h1 {
+  font-family: "Montserrat-SemiBold";
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.yachtsRe .btn__find {
+  font-size: 20px;
+  color: #6D31D0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Montserrat-SemiBold";
+  -webkit-box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 200px;
+  padding: 16px 22px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFEB80), to(#FDBFA3));
+  background: linear-gradient(to right, #FFEB80, #FDBFA3);
+  text-align: center;
+  display: inline-block;
+}
+
+.yachtsRe .btn__find:hover {
+  -webkit-box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+  background: -webkit-gradient(linear, left top, right top, from(#6D31D0), to(#AB80EF));
+  background: linear-gradient(to right, #6D31D0, #AB80EF);
+  color: #FFEB80;
+  border: 1px solid #FFEB80;
+}
+
+.moving {
+  height: 840px;
+  overflow-x: hidden;
+  background-image: url(/images/moving-480.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+  position: relative;
+}
+
+.moving__decor {
+  position: absolute;
+}
+
+.moving__decor1440 {
+  display: none;
+  position: absolute;
+}
+
+.moving__inner {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.moving__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+  z-index: 50;
+}
+
+.moving__links {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.moving__links a {
+  font-family: "AvenirNextCyr-Medium";
+  text-transform: uppercase;
+  color: #FFDB80;
+  background-color: rgba(109, 49, 208, 0.5);
+  border-radius: 10px;
+  padding: 0 8px;
+  position: relative;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.moving__links a:hover {
+  color: #6D31D0;
+  background-color: #FFDB80;
+}
+
+.moving__text {
+  color: inherit;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.moving__text h1 {
+  font-family: "Montserrat-SemiBold";
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.moving .btn__find {
+  font-size: 20px;
+  color: #6D31D0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Montserrat-SemiBold";
+  -webkit-box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 200px;
+  padding: 16px 22px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFEB80), to(#FDBFA3));
+  background: linear-gradient(to right, #FFEB80, #FDBFA3);
+  text-align: center;
+  display: inline-block;
+}
+
+.moving .btn__find:hover {
+  -webkit-box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+  background: -webkit-gradient(linear, left top, right top, from(#6D31D0), to(#AB80EF));
+  background: linear-gradient(to right, #6D31D0, #AB80EF);
+  color: #FFEB80;
+  border: 1px solid #FFEB80;
+}
+
+@media (min-width: 480px) {
+  .familyRe__decor {
+    display: none;
+  }
+  .businessRe__content {
+    padding-top: 50px;
+  }
+  .moving {
+    background-size: cover;
+  }
+  .moving__decor {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .cyprus,
+  .investIn,
+  .familyRe,
+  .businessRe,
+  .yachtsRe,
+  .moving {
+    margin-top: 0;
+    background-image: url(/images/cyprus-768.png);
+  }
+  .cyprus__inner,
+  .investIn__inner,
+  .familyRe__inner,
+  .businessRe__inner,
+  .yachtsRe__inner,
+  .moving__inner {
+    padding: 100px 45px 0;
+  }
+  .cyprus__content,
+  .investIn__content,
+  .familyRe__content,
+  .businessRe__content,
+  .yachtsRe__content,
+  .moving__content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .cyprus__text,
+  .investIn__text,
+  .familyRe__text,
+  .businessRe__text,
+  .yachtsRe__text,
+  .moving__text {
+    max-width: 450px;
+    text-align: justify;
+  }
+  .cyprus__text h1,
+  .investIn__text h1,
+  .familyRe__text h1,
+  .businessRe__text h1,
+  .yachtsRe__text h1,
+  .moving__text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .cyprus__text span,
+  .investIn__text span,
+  .familyRe__text span,
+  .businessRe__text span,
+  .yachtsRe__text span,
+  .moving__text span {
+    font-size: 20px;
+  }
+  .cyprus__links,
+  .investIn__links,
+  .familyRe__links,
+  .businessRe__links,
+  .yachtsRe__links,
+  .moving__links {
+    margin-bottom: 20px;
+  }
+  .cyprus__links a,
+  .investIn__links a,
+  .familyRe__links a,
+  .businessRe__links a,
+  .yachtsRe__links a,
+  .moving__links a {
+    -webkit-box-shadow: 0 3px 12px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 12px 2px rgba(0, 0, 0, 0.3);
+  }
+  .investIn {
+    background-image: url(/images/invest-768.png);
+  }
+  .investIn__decor {
+    display: none;
+  }
+  .investIn__content {
+    margin: 60px 0 auto;
+  }
+  .familyRe {
+    height: 800px;
+    background-image: url(/images/family-768.png);
+  }
+  .businessRe {
+    background-image: url(/images/business-768.png);
+  }
+  .yachtsRe {
+    background-image: url(/images/yachts-768.png);
+  }
+  .moving {
+    background-image: url(/images/moving-768.png);
+  }
+}
+
+.cities,
+.investIn,
+.familyRe,
+.businessRe,
+.yachtsRe,
+.moving {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (min-width: 1000px) {
+  .cyprus,
+  .investIn,
+  .familyRe,
+  .businessRe,
+  .yachtsRe,
+  .moving {
+    background-image: url(/images/cyprus-1000.png);
+  }
+  .cyprus__inner,
+  .investIn__inner,
+  .familyRe__inner,
+  .businessRe__inner,
+  .yachtsRe__inner,
+  .moving__inner {
+    padding-left: 90px;
+  }
+  .investIn {
+    background-image: url(/images/invest-1000.png);
+  }
+  .investIn__content {
+    margin: 150px 0 auto;
+  }
+  .investIn__text h1 {
+    margin: 30px 0;
+  }
+  .familyRe {
+    background-image: url(/images/family-1000.png);
+  }
+  .familyRe__content {
+    padding-top: 80px;
+  }
+  .businessRe {
+    background-image: url(/images/business-1000.png);
+    background-position-x: 60%;
+  }
+  .yachtsRe {
+    background-image: url(/images/yachts-1000.png);
+  }
+  .moving {
+    background-image: url(/images/moving-1000.png);
+  }
+}
+
+@media (min-width: 1440px) {
+  .cyprus {
+    background-position: center;
+    background-image: url(/images/cyprus-1440.png);
+  }
+  .investIn {
+    background-position: center;
+    background-image: url(/images/invest-1440.png);
+  }
+  .familyRe {
+    background-position: center;
+    overflow-y: hidden;
+    background-image: url(/images/family-1440.png);
+  }
+  .familyRe__decor1 {
+    display: block;
+    position: absolute;
+  }
+  .familyRe__decor1 img {
+    height: 900px;
+  }
+  .businessRe {
+    overflow-y: hidden;
+    background-image: url(/images/business-1440.png);
+    background-position: top;
+  }
+  .businessRe__decor {
+    display: block;
+  }
+  .businessRe__decor img {
+    height: 900px;
+  }
+  .yachtsRe {
+    background-position: bottom;
+    background-image: url(/images/yachts-1440.png);
+  }
+  .yachtsRe__content {
+    margin: 150px 0 auto;
+  }
+  .moving {
+    overflow-y: hidden;
+    background-image: url(/images/moving-1440.png);
+  }
+  .moving__decor1440 {
+    display: block;
+  }
+  .moving__decor1440 img {
+    height: 900px;
+    width: 100%;
+  }
+  .moving__content {
+    margin: 150px 0 auto;
+  }
+}
+/*# sourceMappingURL=home.css.map */
