@@ -421,6 +421,39 @@ margin-top: -1rem;
 }
 
 
+// paradise
+
+.paradise {
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+  &__text {
+    padding: 40px;
+    text-align: center;
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+      text-transform: uppercase;
+      font-family: $font-demi;
+      margin-bottom: 30px;
+    }
+    p + p {
+      margin-top: 20px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+.btn__find {
+  @include btn('find');
+}
+}
+
+
+
+
 ////////////////////////////////////
 @media (min-width: 480px) {
   .familyRe {
@@ -505,6 +538,16 @@ margin-top: -1rem;
     .moving {
       background-image: url(/images/moving-768.png);
     }
+    .paradise {
+      &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__text {
+        max-width: 560px;
+      }
+    }
   }
   
   .cities,
@@ -555,6 +598,21 @@ margin-top: -1rem;
   }
   .moving {
     background-image: url(/images/moving-1000.png);
+  }
+
+  .paradise {
+    &__inner {
+      flex-direction: row;
+      gap: 20px;
+      img {
+        object-fit: cover;
+        height: 300px;
+        object-position: 20%;
+      }
+    }
+    &__text {
+      padding: 0;
+    }
   }
 }
 
@@ -615,6 +673,38 @@ margin-top: -1rem;
     }
     &__content {
       margin: 150px 0 auto;
+    }
+  }
+  .paradise {
+    &__inner {
+      padding: 80px 0;
+    }
+    &__imageF {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &__imageL {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+    img {
+      height: 400px;
     }
   }
 }

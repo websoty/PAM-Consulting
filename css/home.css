@@ -753,6 +753,58 @@
   border: 1px solid #FFEB80;
 }
 
+.paradise img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.paradise__text {
+  padding: 40px;
+  text-align: center;
+}
+
+.paradise__text h2 {
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-family: "AvenirNextCyr-Demi";
+  margin-bottom: 30px;
+}
+
+.paradise__text p + p {
+  margin-top: 20px;
+}
+
+.paradise__text p {
+  margin-bottom: 30px;
+}
+
+.paradise .btn__find {
+  font-size: 20px;
+  color: #6D31D0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Montserrat-SemiBold";
+  -webkit-box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 200px;
+  padding: 16px 22px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFEB80), to(#FDBFA3));
+  background: linear-gradient(to right, #FFEB80, #FDBFA3);
+}
+
+.paradise .btn__find:hover {
+  -webkit-box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.6);
+  background: -webkit-gradient(linear, left top, right top, from(#6D31D0), to(#AB80EF));
+  background: linear-gradient(to right, #6D31D0, #AB80EF);
+  color: #FFEB80;
+  border: 1px solid #FFEB80;
+}
+
 @media (min-width: 480px) {
   .familyRe__decor {
     display: none;
@@ -869,6 +921,21 @@
   .moving {
     background-image: url(/images/moving-768.png);
   }
+  .paradise__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .paradise__text {
+    max-width: 560px;
+  }
 }
 
 .cities,
@@ -923,6 +990,23 @@
   }
   .moving {
     background-image: url(/images/moving-1000.png);
+  }
+  .paradise__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+  .paradise__inner img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+    -o-object-position: 20%;
+       object-position: 20%;
+  }
+  .paradise__text {
+    padding: 0;
   }
 }
 
@@ -984,6 +1068,36 @@
   }
   .moving__content {
     margin: 150px 0 auto;
+  }
+  .paradise__inner {
+    padding: 80px 0;
+  }
+  .paradise__imageF {
+    position: relative;
+  }
+  .paradise__imageF::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .paradise__imageL {
+    position: relative;
+  }
+  .paradise__imageL::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .paradise img {
+    height: 400px;
   }
 }
 
