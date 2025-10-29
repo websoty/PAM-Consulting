@@ -14,6 +14,39 @@ async function loadHeaderFooter() {
         header.innerHTML = headerContent;
         initMenu(); // хедер меню
 
+// модалка кнопки get in touch
+const touchBtn = document.querySelector('.btn__touch');
+
+touchBtn.addEventListener('click', () => {
+  const modalRequest = document.createElement('div');
+  modalRequest.classList.add('req-modal');
+  modalRequest.innerHTML = `
+  <div class="req-content">
+  <h5>We’d love to stay in touch — drop your email below!</h5>
+  <form><input type="email" placeholder="E-mail" aria-label="email"></form>
+  <button class="close">Send</button>
+  </div>
+  `;
+  modalRequest.classList.add('active');
+  touchBtn.insertAdjacentElement('afterend', modalRequest);
+
+  const modalReqClose = document.querySelector('.close');
+
+  modalReqClose.addEventListener('click', () => {
+    modalRequest.innerHTML = `
+      <div class="req-content">
+        <h5>Thank You!Your request is being reviewed.</h5>
+        <p>One of our team members will get in touch with you soon</p>
+      </div>
+    `;
+    setTimeout(() => {
+    modalRequest.remove();
+    }, 2500);
+  })
+});
+
+
+
     const footerRes = await fetch('/pages/fetch-footer.html');
       if (!footerRes.ok) throw new Error ('Ошибка при загрузке футера');
       const footerContent = await footerRes.text();

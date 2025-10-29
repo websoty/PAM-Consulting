@@ -203,6 +203,7 @@ body {
 }
 
 .header .nav.show {
+  z-index: 100;
   opacity: 1;
   pointer-events: auto;
   -webkit-transform: translateY(0);
@@ -253,6 +254,7 @@ body {
   transition: all .5s ease-out;
   left: 0;
   visibility: hidden;
+  z-index: 100;
 }
 
 .nav.show ~ .btn__burger::before {
@@ -1283,6 +1285,52 @@ body {
 .send.active .successMsg {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.req-modal {
+  position: absolute;
+  top: 10%;
+  right: 150px;
+  margin-top: 10px;
+  background-color: #FFEB80;
+  padding: 20px;
+  border-radius: 60px;
+  z-index: 1000;
+  display: none;
+}
+
+.req-modal.active {
+  display: block;
+}
+
+.req-content {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.req-content h5 {
+  text-transform: uppercase;
+  font-family: "AvenirNextCyr-Demi";
+  font-size: 18px;
+}
+
+.req-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.req-content button {
+  padding: 10px 20px;
+  background-color: #53269D;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .faq {

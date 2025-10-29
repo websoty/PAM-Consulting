@@ -60,3 +60,51 @@
     transform: translateY(0);
   }
 }
+
+
+.req-modal {
+  position: absolute;
+  top: 10%;
+  right: 150px;
+  margin-top: 10px;
+  background-color: #FFEB80;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 60px;
+  z-index: 1000;
+  display: none;
+}
+
+.req-modal.active {
+  display: block;
+}
+
+.req-content {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  h5 {
+    text-transform: uppercase;
+    font-family: $font-demi;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+.req-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.req-content button {
+  padding: 10px 20px;
+  background-color: #53269D;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
