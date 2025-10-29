@@ -77,11 +77,6 @@ $('.swiper').slick({
   ]
 });
 
-
-
-
-
-
 // слайдер
 function slider() {
   $('.faq__slider').slick({
