@@ -1,33 +1,40 @@
 const header = document.getElementById('header-placeholder');
 const footer = document.getElementById('footer-placeholder');
-const contacts = document.getElementById('contacts-placeholder');
+const servicesBlock = document.getElementById('services-placeholder');
 const helpBlock = document.getElementById('helpBlock-placeholder');
+const contacts = document.getElementById('contacts-placeholder');
 const faqSlider = document.getElementById('faq-placeholder');
+
 
 async function loadHeaderFooter() {
   try {
-    const headerRes = await fetch('header.html');
-    if (!headerRes.ok) throw new Error ('Ошибка при загрузке хедера');
+    const headerRes = await fetch('/pages/header.html');
+      if (!headerRes.ok) throw new Error ('Ошибка при загрузке хедера');
       const headerContent = await headerRes.text();
         header.innerHTML = headerContent;
         initMenu(); // хедер меню
 
-    const footerRes = await fetch('footer.html')
-    if (!footerRes.ok) throw new Error ('Ошибка при загрузке футера');
+    const footerRes = await fetch('/pages/footer.html');
+      if (!footerRes.ok) throw new Error ('Ошибка при загрузке футера');
       const footerContent = await footerRes.text();
         footer.innerHTML = footerContent;
 
-    const helpRes = await fetch('help.html');
+    const servicesRes = await fetch('/pages/fetch-services.html');
+      if (!servicesRes.ok) throw new Error ('Ошибка загрузки блока сервисы');
+        const servicesContent = await servicesRes.text();
+          servicesBlock.innerHTML = servicesContent;  
+
+    const helpRes = await fetch('/pages/help.html');
       if (!helpRes.ok) throw new Error ('Ошибка при загрузке блока');
         const helpContent = await helpRes.text();
           helpBlock.innerHTML = helpContent;
 
-    const contactsRes = await fetch('contacts.html');
+    const contactsRes = await fetch('/pages/contacts.html');
       if (!contactsRes.ok) throw new Error ('Ошибка загрузки блока контакты');
       const contactsContent = await contactsRes.text();
         contacts.innerHTML = contactsContent;
 
-    const faqRes = await fetch('slider-cards.html'); 
+    const faqRes = await fetch('/pages/slider-cards.html'); 
       if (!faqRes.ok) throw new Error ('Ошибка загрузки слайдов');
       const faqContent = await faqRes.text();
       faqSlider.innerHTML = faqContent;
@@ -45,6 +52,30 @@ async function loadHeaderFooter() {
 };
   loadHeaderFooter();
 
+
+$('.swiper').slick({
+  dots: true,
+  infinite: true,
+  speed: 800,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: false,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  fade: true,
+  cssEase: 'linear',
+    responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+      }
+    }
+  ]
+});
 
 // слайдер
 function slider() {
