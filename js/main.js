@@ -8,13 +8,13 @@ const faqSlider = document.getElementById('faq-placeholder');
 
 async function loadHeaderFooter() {
   try {
-    const headerRes = await fetch('/pages/header.html');
+    const headerRes = await fetch('/pages/fetch-header.html');
       if (!headerRes.ok) throw new Error ('Ошибка при загрузке хедера');
       const headerContent = await headerRes.text();
         header.innerHTML = headerContent;
         initMenu(); // хедер меню
 
-    const footerRes = await fetch('/pages/footer.html');
+    const footerRes = await fetch('/pages/fetch-footer.html');
       if (!footerRes.ok) throw new Error ('Ошибка при загрузке футера');
       const footerContent = await footerRes.text();
         footer.innerHTML = footerContent;
@@ -24,12 +24,12 @@ async function loadHeaderFooter() {
         const servicesContent = await servicesRes.text();
           servicesBlock.innerHTML = servicesContent;  
 
-    const helpRes = await fetch('/pages/help.html');
+    const helpRes = await fetch('/pages/fetch-help.html');
       if (!helpRes.ok) throw new Error ('Ошибка при загрузке блока');
         const helpContent = await helpRes.text();
           helpBlock.innerHTML = helpContent;
 
-    const contactsRes = await fetch('/pages/contacts.html');
+    const contactsRes = await fetch('/pages/fetch-contacts.html');
       if (!contactsRes.ok) throw new Error ('Ошибка загрузки блока контакты');
       const contactsContent = await contactsRes.text();
         contacts.innerHTML = contactsContent;
