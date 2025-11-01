@@ -1,0 +1,134 @@
+@import 'style';
+
+.faq {
+  background: linear-gradient($color-first, $color-second);
+  display: none;
+  img {
+    max-width: 100%;
+  }
+  &__inner {
+    padding: 30px 20px 30px;
+  }
+  &__title {
+      font-size: 24px;
+      line-height: 40px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 60px;
+      font-family: $font-demi;
+      color: #fff;
+  }
+  &__slider {
+    .slick-slide {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__item {
+    overflow: hidden;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: #fff;
+    position: relative;
+    &-descr {
+      padding: 20px 30px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h4 {
+        color: $color-first;
+        font-size: 20px;
+        font-family: $font-demi;
+        line-height: 32px;
+      }
+      p {
+        letter-spacing: 0.5px;
+        line-height: 24px;
+      }
+    }
+    &-note {
+    position: absolute;
+    background: linear-gradient(90deg, #53269D, $color-first);
+    padding: 4px 15px;
+    border-radius: 20px;
+    top: 110px;
+    right: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;      
+    }
+  }    
+}
+
+@media (min-width: 375px) {
+  .faq {
+    display: block;
+  }
+}
+
+@media (min-width: 425px) {
+  .faq {
+    &__item {
+      &-note {
+        top: 130px;
+        right: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .faq {
+    &__item {
+      &-note {
+        top: 150px;
+        right: 50px;
+      }
+    }
+  }
+} 
+
+@media (min-width: 600px) {
+  .faq {
+    &__item {
+      &-note {
+        top: 80px;
+        right: 15px;
+      }
+    }
+  }
+} 
+
+@media (min-width: 768px) {
+  .faq {
+    &__title {
+      font-size: 36px;
+    }
+    &__item {
+      &-note {
+        top: 120px;
+        right: 50px;
+      }
+    }
+  }
+} 
+
+@media (min-width: 1000px) {
+  .faq {
+    &__item {
+      &-note {
+        top: 150px;
+        right: 50px;
+      }
+    }
+  }
+}
+

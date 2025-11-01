@@ -17,6 +17,7 @@
       padding: 16px 22px;
       background: linear-gradient(to right, #FFEB80, #FDBFA3);
   } @else if $type == 'submit' {
+      width: 130px;
       padding: 18px 34px;
       background-color: #FFDB80;
       font-family: $font-bold;

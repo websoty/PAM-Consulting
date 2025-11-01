@@ -2,3 +2,109 @@
 @import 'fonts';
 @import 'mixins';
 @import 'global';
+@import 'header';
+@import 'footer';
+@import 'contacts';
+@import 'help';
+@import 'services';
+
+
+.send {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+  z-index: 9999;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .successMsg {
+    background: #fff;
+    padding: 40px 60px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transform: translateY(20px);
+    transition: transform .3s ease, opacity .3s ease;
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .successMsg__close {
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background .2s ease;
+
+      &:hover {
+        background: #43a047;
+      }
+    }
+  }
+
+  &.active .successMsg {
+    transform: translateY(0);
+  }
+}
+
+
+.req-modal {
+  position: absolute;
+  top: 10%;
+  right: 150px;
+  margin-top: 10px;
+  background-color: #FFEB80;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 60px;
+  z-index: 1000;
+  display: none;
+}
+
+.req-modal.active {
+  display: block;
+}
+
+.req-content {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  h5 {
+    text-transform: uppercase;
+    font-family: $font-demi;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+.req-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.req-content button {
+  padding: 10px 20px;
+  background-color: #53269D;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

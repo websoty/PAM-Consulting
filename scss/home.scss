@@ -1,0 +1,960 @@
+@import 'vars';
+@import 'fonts';
+@import 'mixins';
+
+.cyprus {
+background-image: url(/images/cyprus-480.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 15% center;
+margin-top: -1rem;
+  &__inner {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__links {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    a {
+      font-family: $font-medium;
+      text-transform: uppercase;
+      color: #FFDB80;
+      background-color: rgba(109, 49, 208, 0.5);
+      border-radius: 10px;
+      padding: 0 8px;
+      position: relative;
+      transition: .3s ease-out;
+      &:hover {
+        color: $color-first;
+        background-color: #FFDB80;
+      }
+    }
+  }
+  &__text {
+    margin-bottom: 30px;
+    text-align: center;
+    h1 {
+      font-family: $font-mont;
+      font-size: 28px;
+      line-height: 40px;
+      color: #fff;
+    }
+    span {
+      display: block;
+      font-size: 18px;
+      color: #fff;
+      font-family: $font-mont;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+    p {
+      color: #fff;
+    }
+  }
+  .btn__find {
+    @include btn('find');
+  }
+}
+
+.cities {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h4 {
+    color: #fff;
+    font-family: $font-mont;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  &__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &__city {
+    width: 144px;
+    height: 180px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 32px;
+      font-family: $font-mont;
+      color: $color-second;
+    }
+  }
+}
+
+.investIn {
+  height: 840px;
+  overflow-x: hidden;
+  background-image: url(/images/invest-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15% center;
+  position: relative;
+  &__decor {
+    position: absolute;
+    top: 60px;
+  }
+    &__inner {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    z-index: 50;
+  }
+  &__links {
+    justify-content: space-around;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    a {
+      font-family: $font-medium;
+      text-transform: uppercase;
+      color: #FFDB80;
+      background-color: rgba(109, 49, 208, 0.5);
+      border-radius: 10px;
+      padding: 0 8px;
+      position: relative;
+      transition: .3s ease-out;
+      &:hover {
+        color: $color-first;
+        background-color: #FFDB80;
+      }
+    }
+  }
+  &__text {
+    color: inherit;
+    margin-bottom: 30px;
+    text-align: center;
+    h1 {
+      font-family: $font-mont;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  .btn__find {
+    @include btn('find');
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+.familyRe {
+  &__decor1 {
+    display: none;
+  }
+  height: 700px;
+  overflow-x: hidden;
+  background-image: url(/images/family-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  &__decor {
+    position: absolute;
+  }
+    &__inner {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    z-index: 50;
+  }
+  &__links {
+    justify-content: space-around;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    a {
+      font-family: $font-medium;
+      text-transform: uppercase;
+      color: #FFDB80;
+      background-color: rgba(109, 49, 208, 0.5);
+      border-radius: 10px;
+      padding: 0 8px;
+      position: relative;
+      transition: .3s ease-out;
+      &:hover {
+        color: $color-first;
+        background-color: #FFDB80;
+      }
+    }
+  }
+  &__text {
+    color: inherit;
+    margin-bottom: 30px;
+    text-align: center;
+    h1 {
+      font-family: $font-mont;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  .btn__find {
+    @include btn('find');
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+.businessRe {
+  height: 840px;
+  overflow-x: hidden;
+  background-image: url(/images/business-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 35% center;
+  position: relative;
+  &__decor {
+    position: absolute;
+    display: none;
+  }
+    &__inner {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0 40px;
+    z-index: 50;
+  }
+  &__links {
+    justify-content: space-around;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    a {
+      font-family: $font-medium;
+      text-transform: uppercase;
+      color: #FFDB80;
+      background-color: rgba(109, 49, 208, 0.5);
+      border-radius: 10px;
+      padding: 0 8px;
+      position: relative;
+      transition: .3s ease-out;
+      &:hover {
+        color: $color-first;
+        background-color: #FFDB80;
+      }
+    }
+  }
+  &__text {
+    color: inherit;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    h1 {
+      font-family: $font-mont;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  .btn__find {
+    @include btn('find');
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+
+.yachtsRe {
+  height: 840px;
+  overflow-x: hidden;
+  background-image: url(/images/yachts-480.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+    &__inner {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    z-index: 50;
+  }
+  &__links {
+    justify-content: space-around;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    a {
+      font-family: $font-medium;
+      text-transform: uppercase;
+      color: #FFDB80;
+      background-color: rgba(109, 49, 208, 0.5);
+      border-radius: 10px;
+      padding: 0 8px;
+      position: relative;
+      transition: .3s ease-out;
+      &:hover {
+        color: $color-first;
+        background-color: #FFDB80;
+      }
+    }
+  }
+  &__text {
+    color: inherit;
+    margin-bottom: 30px;
+    text-align: center;
+    h1 {
+      font-family: $font-mont;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  .btn__find {
+    @include btn('find');
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+
+.moving {
+  height: 840px;
+  overflow-x: hidden;
+  background-image: url(/images/moving-480.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+  position: relative;
+  &__decor {
+    position: absolute;
+  }
+  &__decor1440 {
+    display: none;
+    position: absolute;
+  }
+    &__inner {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    z-index: 50;
+  }
+  &__links {
+    justify-content: space-around;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    a {
+      font-family: $font-medium;
+      text-transform: uppercase;
+      color: #FFDB80;
+      background-color: rgba(109, 49, 208, 0.5);
+      border-radius: 10px;
+      padding: 0 8px;
+      position: relative;
+      transition: .3s ease-out;
+      &:hover {
+        color: $color-first;
+        background-color: #FFDB80;
+      }
+    }
+  }
+  &__text {
+    color: inherit;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    h1 {
+      font-family: $font-mont;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  .btn__find {
+    @include btn('find');
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+
+// paradise
+
+.paradise {
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+  &__text {
+    padding: 40px;
+    text-align: center;
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+      text-transform: uppercase;
+      font-family: $font-demi;
+      margin-bottom: 30px;
+    }
+    p + p {
+      margin-top: 20px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+  }
+.btn__find {
+  @include btn('find');
+}
+}
+
+.choose
+ {
+  background: linear-gradient(180deg, #f7d382eb, #FDBFA3);
+  &__inner {
+    padding: 60px 25px;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 40px;
+    font-family: $font-mont;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-bottom: 40px;
+    p {
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+  }
+    &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 10px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    h5 {
+      color: $color-first;
+      font-size: 20px;
+      font-family: $font-mont;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.who {
+  background: linear-gradient(180deg, $color-second, $color-first);
+  &__inner {
+    padding: 60px 40px;
+  }
+  &__content {
+    margin-bottom: 50px;
+    h4 {
+      color: #fff;
+      font-size: 36px;
+      line-height: 29px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 4px;
+        background-color: #FDBFA3;
+        bottom: -25px;
+        left: 0;
+      }
+    }
+    p + p {
+      margin-top: 20px;
+    }
+    p {
+      color: #fff;
+      margin-bottom: 35px;
+    }
+  }
+    &__about {
+      @include btn('default');
+    }
+}
+
+.founder {
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px 0 50px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    &__text {
+      text-align: center;
+      margin-top: 15px;
+      h4 {
+        font-size: 20px;
+        font-family: $font-mont;
+        line-height: 32px;
+        color: $color-first;
+      }
+      h5 {
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin-bottom: 30px;
+      }
+    }
+    .btn__contact {
+      @include btn('default');
+    }
+}
+
+.partners {
+&__inner {
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 36px;
+    line-height: 40px;
+    font-family: $font-mont;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+}
+
+
+////////////////////////////////////
+@media (min-width: 480px) {
+  .familyRe {
+    &__decor {
+      display: none;
+    }
+  }
+  .businessRe {
+    &__content {
+      padding-top: 50px;
+    }
+  }
+  .moving {
+    background-size: cover;
+    &__decor {
+      display: none;
+    }
+  }
+  .choose {
+    &__inner {
+      padding: 80px 30px;
+    }
+    &__title {
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+    &__text {
+      max-width: 500px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+    &__list {
+      align-items: flex-start;
+    }
+    &__item {
+      flex: 1 1 calc(50% -10px);
+      max-width: calc(50% - 10px);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    ul.slick-dots {
+      right: 0;
+      top: 50%;
+      width: 200px;
+      height: 50px;
+      transform: rotate(90deg);
+    }
+  }
+  .cyprus,
+  .investIn,
+  .familyRe,
+  .businessRe,
+  .yachtsRe,
+  .moving {
+    margin-top: 0;
+    background-image: url(/images/cyprus-768.png);
+    &__inner {
+      padding: 100px 45px 0;
+    }
+    &__content {
+      align-items: flex-start;
+    }
+    &__text {
+      max-width: 450px;
+      text-align: justify;
+      h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+    &__links {
+      margin-bottom: 20px;
+      a {
+        box-shadow: 0 3px 12px 2px rgba(0, 0, 0, 0.3);
+  }
+      }
+    }
+    .investIn {
+      background-image: url(/images/invest-768.png);
+      &__decor {
+        display: none;
+      }
+      &__content {
+        margin: 60px 0 auto;
+      }
+    }
+    .familyRe {
+      height: 800px;
+      background-image: url(/images/family-768.png);
+    }
+    .businessRe {
+      background-image: url(/images/business-768.png);
+    }
+    .yachtsRe {
+      background-image: url(/images/yachts-768.png);
+    }
+    .moving {
+      background-image: url(/images/moving-768.png);
+    }
+    .paradise {
+      &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__text {
+        max-width: 560px;
+      }
+    }
+  .choose,
+  .make {
+    &__inner {
+      padding: 80px 70px;
+    }
+    &__list {
+      gap: 50px 10px;
+    }
+  }
+  
+  .who {
+    padding: 0 50px;
+    &__content {
+      max-width: 680px;
+    h4 {
+      text-align: center;
+      &::after {
+        left: -120px;
+        width: 575px;
+      }
+    }      
+    }
+
+  }
+
+  .founder {
+    max-width: 580px;
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px;
+    justify-content: flex-start;
+    &__text { 
+      align-self: flex-start;
+      text-align: justify;
+    }
+    .btn__contact {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  .partners {
+    &__inner {
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;      
+    }
+  }
+  }
+  
+  .cities,
+  .investIn,
+  .familyRe,
+  .businessRe,
+  .yachtsRe,
+  .moving {
+    align-items: flex-start;
+  }
+
+
+@media (min-width: 1000px) {
+  .cyprus,
+  .investIn,
+  .familyRe,
+  .businessRe,
+  .yachtsRe,
+  .moving  {
+    background-image: url(/images/cyprus-1000.png);
+    &__inner {
+      padding-left: 90px;
+    }
+  }
+  .investIn {
+    background-image: url(/images/invest-1000.png);
+    &__content {
+      margin: 150px 0 auto;
+    }
+    &__text {
+      h1 {
+        margin: 30px 0;
+      }
+    }
+  }
+  .familyRe {
+    background-image: url(/images/family-1000.png);
+    &__content {
+      padding-top: 80px;
+    }
+  }
+  .businessRe {
+    background-image: url(/images/business-1000.png);
+    background-position-x: 60%;
+  }
+  .yachtsRe {
+    background-image: url(/images/yachts-1000.png);
+  }
+  .moving {
+    background-image: url(/images/moving-1000.png);
+  }
+
+  .paradise {
+    padding: 90px 0;
+    &__inner {
+      flex-direction: row;
+      gap: 20px;
+      img {
+        object-fit: cover;
+        height: 300px;
+        object-position: 20%;
+      }
+    }
+    &__text {
+      padding: 0;
+    }
+  }
+  .choose {
+    &__text {
+      max-width: 700px;
+    }
+    &__list {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+  }
+
+  .who {
+    &__content {
+      h4 {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .cyprus {
+    height: 800px;
+    background-position: center;
+    background-image: url(/images/cyprus-1440.png);
+  }
+  .investIn {
+    height: 800px;
+    background-position: center;
+    background-image: url(/images/invest-1440.png);
+  }
+  .familyRe {
+    height: 800px;
+    background-position: center;
+    overflow-y: hidden;
+    background-image: url(/images/family-1440.png);
+    &__decor1 {
+      display: block;
+      position: absolute;
+      img {
+        height: 900px;
+      }
+    }
+  }
+  .businessRe {
+    height: 800px;
+    overflow-y: hidden;
+    background-image: url(/images/business-1440.png);
+    background-position: top;
+    &__decor {
+      display: block;
+      img {
+        height: 900px;
+      }
+    }
+  }
+  .yachtsRe {
+    height: 800px;
+    background-position: bottom;
+    background-image: url(/images/yachts-1440.png);
+    &__content {
+      margin: 150px 0 auto;
+    }
+  }
+  .moving {
+    height: 800px;
+    overflow-y: hidden;
+    background-image: url(/images/moving-1440.png);
+    &__decor1440 {
+      display: block;
+      img {
+        height: 900px;
+        width: 100%;
+      }
+    }
+    &__content {
+      margin: 150px 0 auto;
+    }
+  }
+  .paradise {
+    &__inner {
+      padding: 80px 0;
+    }
+    &__imageF {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &__imageL {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+    img {
+      height: 400px;
+    }
+  }
+
+  .who {
+    padding: 0 70px;
+    &__inner {
+      display: flex;
+      justify-content: space-around;
+    }
+    &__content {
+      h4 {
+        text-transform: uppercase;
+        &::after {
+        left: -400px;
+        width: 800px;
+        }
+      }
+      p {
+      margin-bottom: 50px;
+      }
+    }
+  }
+  .partners {
+    &__inner {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.swiper {
+  overflow: hidden;
+ul.slick-dots {
+  bottom: 10px;
+}
+}
