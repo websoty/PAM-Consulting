@@ -75,6 +75,7 @@ touchBtn.addEventListener('click', () => {
       const faqImages = document.querySelectorAll('img');
         faqImages.forEach(img => {
           img.style.maxWidth = '100%';
+          img.loading = 'lazy';
         });
       slider(); 
 
